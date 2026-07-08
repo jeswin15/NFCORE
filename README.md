@@ -148,7 +148,7 @@ IsoSeqAnnotate/
 ## Clone Repository
 
 ```bash
-git clone https://github.com/<jeswin15>/IsoSeqAnnotate.git
+git clone https://github.com/<jeswin15>/NFCORE.git
 
 cd IsoSeqAnnotate
 ```
