@@ -1,4 +1,0 @@
-cluster_id	trans_id	strand	a_percent	a_count	sequence
-transcript/8171	G2.1	-	85.0	17	CAAAAAAAAAAAAACAACAA
-transcript/12500	G19.1	-	85.0	17	CAAAAAAACAAAAACAAAAA
-transcript/12431	G19.1	-	85.0	17	CAAAAAAACAAAAACAAAAA

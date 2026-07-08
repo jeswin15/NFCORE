@@ -1,6 +1,0 @@
-TAMA Collapse has run successfully!
-Parameters used:	-s alz.ccs.pbmm2.sorted.bam -f genome.fa -p alz.ccs -x capped -e common_ends -c 99.0 -i 85.0 -icm ident_cov -a 10 -m 10 -z 10 -d merge_dup -sj no_priority -sjt 10 -lde 1000 -ses _ -b BAM -log log_on -rm original -vc 5
-Total Gene Count:	37
-Total Transcript Count:	51
-Total Accepted Reads:	57
-Total Discarded Reads:	148
