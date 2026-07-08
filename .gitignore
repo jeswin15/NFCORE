@@ -1,0 +1,26 @@
+# Nextflow
+.nextflow/
+work/
+
+
+# Logs
+.nextflow.log
+*.log
+*.trace
+
+# Reports
+*.html
+
+# Python
+__pycache__/
+*.pyc
+
+# VSCode
+.vscode/
+
+# Progress
+progress.JSON
+progress.json
+
+# Temporary files
+*.tmp

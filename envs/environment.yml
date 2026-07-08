@@ -1,0 +1,25 @@
+name: isoseqannotate
+
+channels:
+  - bioconda
+  - conda-forge
+
+dependencies:
+
+  # Python
+  - python=3.10
+
+  # PacBio
+  - lima
+  - isoseq3
+  - pbmm2
+
+  # Alignment utilities
+  - samtools
+
+  # Python libraries
+  - biopython
+  - pysam
+
+  # General
+  - pigz
