@@ -136,6 +136,159 @@ IsoSeqAnnotate/
 
 # Installation
 
+IsoSeqAnnotate requires **Java**, **Git**, **Miniforge (Conda)**, and **Nextflow**. Follow the steps below to install all required software on a fresh Linux (Ubuntu) system.
+
+---
+
+## 1. Install Java (JDK 17)
+
+Nextflow requires **Java 17 or later**.
+
+### Check if Java is already installed
+
+```bash
+java -version
+```
+
+Expected output:
+
+```text
+openjdk version "17.x.x"
+```
+
+If Java is already installed, proceed to the next step.
+
+### Install Java (Ubuntu)
+
+```bash
+sudo apt update
+sudo apt install openjdk-17-jdk -y
+```
+
+### Verify Installation
+
+```bash
+java -version
+```
+
+Example:
+
+```text
+openjdk version "17.0.19"
+OpenJDK Runtime Environment
+OpenJDK 64-Bit Server VM
+```
+
+---
+
+## 2. Install Git
+
+Git is required to clone and update the pipeline repository.
+
+### Check if Git is installed
+
+```bash
+git --version
+```
+
+Example:
+
+```text
+git version 2.43.0
+```
+
+If Git is already installed, proceed to the next step.
+
+### Install Git
+
+```bash
+sudo apt update
+sudo apt install git -y
+```
+
+### Verify Installation
+
+```bash
+git --version
+```
+
+---
+
+## 3. Install Miniforge (Conda)
+
+IsoSeqAnnotate uses **Conda** to install and manage all required software dependencies.
+
+### Download Miniforge
+
+```bash
+wget https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Linux-x86_64.sh
+```
+
+### Install Miniforge
+
+```bash
+bash Miniforge3-Linux-x86_64.sh
+```
+
+During installation:
+
+- Press **Enter** to use the default installation location.
+- Type **yes** to accept the license agreement.
+- Type **yes** when prompted to initialize Conda.
+
+### Reload the Shell
+
+```bash
+source ~/.bashrc
+```
+
+Alternatively, close and reopen your terminal.
+
+### Verify Installation
+
+```bash
+conda --version
+```
+
+Example:
+
+```text
+conda 25.x.x
+```
+
+---
+
+## 4. Install Nextflow
+
+Nextflow is the workflow management system used to execute the pipeline.
+
+### Download Nextflow
+
+```bash
+curl -s https://get.nextflow.io | bash
+```
+
+### Move Nextflow to Your PATH
+
+```bash
+sudo mv nextflow /usr/local/bin/
+```
+
+### Verify Installation
+
+```bash
+nextflow -version
+```
+
+Example:
+
+```text
+N E X T F L O W
+version 26.04.4
+```
+
+---
+
 ## Requirements
 
 - Linux
