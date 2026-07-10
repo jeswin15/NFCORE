@@ -55,36 +55,36 @@ Designed with reproducibility and modularity in mind, IsoSeqAnnotate provides an
 # Workflow
 
 ```
-PacBio CCS BAM
+    PacBio CCS BAM
         │
         ▼
 ──────────────────────────────
-LIMA
-──────────────────────────────
-        │
-        ▼
-──────────────────────────────
-REFINE
+       LIMA
 ──────────────────────────────
         │
         ▼
 ──────────────────────────────
-CLUSTER2
+      REFINE
 ──────────────────────────────
         │
         ▼
 ──────────────────────────────
-TAMA Cleanup
+     CLUSTER2
 ──────────────────────────────
         │
         ▼
 ──────────────────────────────
-PBMM2 Alignment
+    TAMA Cleanup
 ──────────────────────────────
         │
         ▼
 ──────────────────────────────
-Transcript Collapse
+    PBMM2 Alignment
+──────────────────────────────
+        │
+        ▼
+──────────────────────────────
+   Transcript Collapse
 ──────────────────────────────
             │
             ▼
@@ -92,7 +92,7 @@ Transcript Collapse
       │               │
       ▼               ▼
 
- IsoSeq3          TAMA
+    IsoSeq3          TAMA
 
       │               │
       └──────┬────────┘
