@@ -1,0 +1,154 @@
+Jul-08 18:00:27.255 [main] DEBUG nextflow.cli.Launcher - $> nextflow run main.nf --collapse_method isoseq3 --input modules/local/test_data/alz.ccs.bam --primers modules/local/test_data/isoseq_primers.fasta --genome modules/local/test_data/genome.fa
+Jul-08 18:00:27.634 [main] DEBUG nextflow.cli.CmdRun - N E X T F L O W  ~  version 26.04.4
+Jul-08 18:00:27.701 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/home/jeswin/.nextflow/plugins; core-plugins: nf-amazon@3.9.2,nf-azure@1.22.6,nf-cloudcache@0.6.0,nf-codecommit@0.5.3,nf-console@1.3.0,nf-google@1.27.3,nf-k8s@1.5.4,nf-seqera@0.21.0,nf-tower@1.28.1,nf-wave@1.21.0
+Jul-08 18:00:27.789 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Jul-08 18:00:27.791 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Jul-08 18:00:27.800 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.14.1 in 'deployment' mode
+Jul-08 18:00:27.867 [main] DEBUG nextflow.util.RetryConfig - Missing nextflow session - using default retry config
+Jul-08 18:00:28.372 [main] DEBUG nextflow.plugin.PluginUpdater - Using plugin repository: HttpPluginRepository [registry]; url=https://registry.nextflow.io/api
+Jul-08 18:00:28.389 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Jul-08 18:00:28.479 [main] DEBUG nextflow.config.ConfigBuilder - Found config local: /home/jeswin/Projects/nfcore/isoseqannotate/nextflow.config
+Jul-08 18:00:28.490 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /home/jeswin/Projects/nfcore/isoseqannotate/nextflow.config
+Jul-08 18:00:28.508 [main] DEBUG nextflow.config.ConfigParserFactory - Using config parser v2
+Jul-08 18:00:28.567 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `standard`
+Jul-08 18:00:29.729 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins declared=[nf-schema@2.3.0]
+Jul-08 18:00:29.731 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Jul-08 18:00:29.731 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins resolved requirement=[nf-schema@2.3.0]
+Jul-08 18:00:29.743 [main] DEBUG nextflow.plugin.PluginUpdater - Installing plugin nf-schema version: 2.3.0
+Jul-08 18:00:29.765 [main] INFO  org.pf4j.AbstractPluginManager - Plugin 'nf-schema@2.3.0' resolved
+Jul-08 18:00:29.766 [main] INFO  org.pf4j.AbstractPluginManager - Start plugin 'nf-schema@2.3.0'
+Jul-08 18:00:29.787 [main] DEBUG nextflow.plugin.BasePlugin - Plugin started nf-schema@2.3.0
+Jul-08 18:00:29.822 [main] DEBUG n.secret.LocalSecretsProvider - Secrets store: /home/jeswin/.nextflow/secrets/store.json
+Jul-08 18:00:29.827 [main] DEBUG nextflow.secret.SecretsLoader - Discovered secrets providers: [nextflow.secret.LocalSecretsProvider@4832f03b] - activable => nextflow.secret.LocalSecretsProvider@4832f03b
+Jul-08 18:00:29.851 [main] DEBUG nextflow.cli.CmdRun - Launching `main.nf` [deadly_volta] - revision: 7b9ed56832
+Jul-08 18:00:30.024 [main] DEBUG nextflow.Session - Session UUID: 2e7a0f80-15fe-4b64-887d-58fa95929ea3
+Jul-08 18:00:30.024 [main] DEBUG nextflow.Session - Run name: deadly_volta
+Jul-08 18:00:30.025 [main] DEBUG nextflow.Session - Executor pool size: 8
+Jul-08 18:00:30.048 [main] DEBUG nextflow.file.FilePorter - File porter settings maxRetries=3; maxTransfers=50; pollTimeout=null
+Jul-08 18:00:30.062 [main] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'FileTransfer' minSize=10; maxSize=24; workQueue=LinkedBlockingQueue[-1]; allowCoreThreadTimeout=false
+Jul-08 18:00:30.123 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 26.04.4 build 12445
+  Created: 17-06-2026 16:30 UTC 
+  System: Linux 6.18.33.1-microsoft-standard-WSL2
+  Runtime: Groovy 4.0.31 on OpenJDK 64-Bit Server VM 23.0.2-internal-adhoc.conda.src
+  Encoding: UTF-8 (UTF-8)
+  Process: 15318@ZestFlow [127.0.1.1]
+  CPUs: 8 - Mem: 3.4 GB (2.6 GB) - Swap: 1 GB (1002.7 MB)
+Jul-08 18:00:30.180 [main] DEBUG nextflow.Session - Work-dir: /home/jeswin/Projects/nfcore/isoseqannotate/work [ext2/ext3]
+Jul-08 18:00:30.238 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+Jul-08 18:00:30.261 [main] DEBUG nextflow.Session - Observer factory (v2): LinObserverFactory
+Jul-08 18:00:30.267 [main] DEBUG nextflow.Session - Observer factory (v2): DefaultObserverFactory
+Jul-08 18:00:30.321 [main] DEBUG nextflow.Session - Observer factory: ValidationObserverFactory
+Jul-08 18:00:30.401 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
+Jul-08 18:00:30.423 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 9; maxThreads: 1000
+Jul-08 18:00:30.545 [main] DEBUG nextflow.Session - Session start
+Jul-08 18:00:30.568 [main] DEBUG nextflow.trace.TraceFileObserver - Workflow started -- trace file: results/pipeline_info/trace.txt
+Jul-08 18:00:30.576 [main] DEBUG nextflow.script.ScriptLoaderFactory - Using script parser v2
+Jul-08 18:00:30.582 [main] DEBUG nextflow.Session - Using default localLib path: /home/jeswin/Projects/nfcore/isoseqannotate/lib
+Jul-08 18:00:32.324 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Jul-08 18:00:32.762 [main] INFO  nextflow.Nextflow - 
+Jul-08 18:00:32.763 [main] INFO  nextflow.Nextflow - Running parameter validation...
+Jul-08 18:00:32.782 [main] INFO  nextflow.Nextflow - ✓ Parameter validation passed
+Jul-08 18:00:32.794 [main] INFO  nextflow.Nextflow - 
+============================================================
+                 IsoSeqAnnotate v0.95
+============================================================
+
+Run Information
+------------------------------------------------------------
+Input BAM        : modules/local/test_data/alz.ccs.bam
+Primers          : modules/local/test_data/isoseq_primers.fasta
+Genome           : modules/local/test_data/genome.fa
+Collapse Method  : isoseq3
+Output Directory : results
+
+Resources
+------------------------------------------------------------
+LIMA CPUs        : 4
+REFINE CPUs      : 4
+CLUSTER2 CPUs    : 4
+PBMM2 CPUs       : 8
+Collapse CPUs    : 4
+
+============================================================
+Starting pipeline...
+============================================================
+
+Jul-08 18:00:32.800 [main] INFO  nextflow.Nextflow - Collapse method = isoseq3
+Jul-08 18:00:33.050 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: local
+Jul-08 18:00:33.051 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jul-08 18:00:33.079 [main] DEBUG nextflow.executor.Executor - [warm up] executor > local
+Jul-08 18:00:33.102 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=8; memory=3.4 GB; capacity=8; pollInterval=100ms; dumpInterval=5m
+Jul-08 18:00:33.108 [main] DEBUG n.processor.TaskPollingMonitor - >>> barrier register (monitor: local)
+Jul-08 18:00:33.215 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'ISOSEQANNOTATE:LIMA': maxForks=0; fair=false; array=0
+Jul-08 18:00:33.296 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: local
+Jul-08 18:00:33.296 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jul-08 18:00:33.299 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'ISOSEQANNOTATE:REFINE': maxForks=0; fair=false; array=0
+Jul-08 18:00:33.313 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: local
+Jul-08 18:00:33.314 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jul-08 18:00:33.316 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'ISOSEQANNOTATE:CLUSTER2': maxForks=0; fair=false; array=0
+Jul-08 18:00:33.327 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: local
+Jul-08 18:00:33.328 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jul-08 18:00:33.330 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'ISOSEQANNOTATE:TAMA_CLEANUP': maxForks=0; fair=false; array=0
+Jul-08 18:00:33.346 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: local
+Jul-08 18:00:33.347 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jul-08 18:00:33.349 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'ISOSEQANNOTATE:PBMM2': maxForks=0; fair=false; array=0
+Jul-08 18:00:33.364 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: local
+Jul-08 18:00:33.364 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jul-08 18:00:33.366 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'ISOSEQANNOTATE:COLLAPSE': maxForks=0; fair=false; array=0
+Jul-08 18:00:33.375 [main] DEBUG nextflow.Session - Process names: ISOSEQANNOTATE:TAMA_CLEANUP, ISOSEQANNOTATE:LIMA, ISOSEQANNOTATE:TAMA_COLLAPSE, PBMM2, ISOSEQANNOTATE:COLLAPSE, ISOSEQANNOTATE:REFINE, TAMA_COLLAPSE, ISOSEQANNOTATE:CLUSTER2, LIMA, COLLAPSE, CLUSTER2, REFINE, TAMA_CLEANUP, ISOSEQANNOTATE:PBMM2
+Jul-08 18:00:33.380 [main] DEBUG nextflow.Session - Igniting dataflow network (8)
+Jul-08 18:00:33.401 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > ISOSEQANNOTATE:LIMA
+Jul-08 18:00:33.403 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > ISOSEQANNOTATE:REFINE
+Jul-08 18:00:33.406 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > ISOSEQANNOTATE:CLUSTER2
+Jul-08 18:00:33.409 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > ISOSEQANNOTATE:TAMA_CLEANUP
+Jul-08 18:00:33.411 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > ISOSEQANNOTATE:PBMM2
+Jul-08 18:00:33.413 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > ISOSEQANNOTATE:COLLAPSE
+Jul-08 18:00:33.416 [main] DEBUG nextflow.script.ScriptRunner - Parsed script files:
+  _nf_script_6da0c8c6e68eb15d: /home/jeswin/Projects/nfcore/isoseqannotate/workflows/validation.nf
+  _nf_script_c69c233954f20144: /home/jeswin/Projects/nfcore/isoseqannotate/workflows/isoseqannotate.nf
+  _nf_script_5885ac5fb2fd7c4f: /home/jeswin/Projects/nfcore/isoseqannotate/modules/local/collapse/main.nf
+  _nf_script_189e18997d0e29d7: /home/jeswin/Projects/nfcore/isoseqannotate/modules/local/refine/main.nf
+  _nf_script_fe23c8b09e26273b: /home/jeswin/Projects/nfcore/isoseqannotate/modules/local/cluster2/main.nf
+  _nf_script_78779dd5fda839dd: /home/jeswin/Projects/nfcore/isoseqannotate/modules/local/pbmm2/main.nf
+  _nf_script_1927ad9d6c2541a7: /home/jeswin/Projects/nfcore/isoseqannotate/modules/local/tama_cleanup/main.nf
+  _nf_script_c894749a4068779a: /home/jeswin/Projects/nfcore/isoseqannotate/modules/local/lima/main.nf
+  Main: /home/jeswin/Projects/nfcore/isoseqannotate/main.nf
+Jul-08 18:00:33.416 [main] DEBUG nextflow.script.ScriptRunner - > Awaiting termination 
+Jul-08 18:00:33.416 [main] DEBUG nextflow.Session - Session await
+Jul-08 18:00:33.711 [Actor Thread 8] INFO  nextflow.conda.CondaCache - Creating env using conda: /home/jeswin/Projects/nfcore/isoseqannotate/envs/environment.yml [cache /home/jeswin/Projects/nfcore/isoseqannotate/work/conda/env-aebdc968629f7c5e995d5363b0b3f376]
+Jul-08 18:00:53.210 [Actor Thread 8] DEBUG nextflow.conda.CondaCache - 'conda' create complete env=/home/jeswin/Projects/nfcore/isoseqannotate/envs/environment.yml path=/home/jeswin/Projects/nfcore/isoseqannotate/work/conda/env-aebdc968629f7c5e995d5363b0b3f376
+Jul-08 18:00:53.451 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-08 18:00:53.462 [Task submitter] INFO  nextflow.Session - [24/7728ea] Submitted process > ISOSEQANNOTATE:LIMA (alz.ccs)
+Jul-08 18:01:00.051 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 1; name: ISOSEQANNOTATE:LIMA (alz.ccs); status: COMPLETED; exit: 0; error: -; workDir: /home/jeswin/Projects/nfcore/isoseqannotate/work/24/7728ea8bd82270cb1d6ef12b110f43]
+Jul-08 18:01:00.052 [Task monitor] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'TaskFinalizer' minSize=10; maxSize=24; workQueue=LinkedBlockingQueue[-1]; allowCoreThreadTimeout=false
+Jul-08 18:01:00.129 [TaskFinalizer-1] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'PublishDir' minSize=10; maxSize=24; workQueue=LinkedBlockingQueue[-1]; allowCoreThreadTimeout=false
+Jul-08 18:01:00.132 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-08 18:01:00.134 [Task submitter] INFO  nextflow.Session - [5b/2c986a] Submitted process > ISOSEQANNOTATE:REFINE (alz.ccs)
+Jul-08 18:01:04.955 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 2; name: ISOSEQANNOTATE:REFINE (alz.ccs); status: COMPLETED; exit: 0; error: -; workDir: /home/jeswin/Projects/nfcore/isoseqannotate/work/5b/2c986a469c4c377534da6c60f9ccf6]
+Jul-08 18:01:04.998 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-08 18:01:05.000 [Task submitter] INFO  nextflow.Session - [be/880d05] Submitted process > ISOSEQANNOTATE:CLUSTER2 (alz.ccs)
+Jul-08 18:02:13.455 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 3; name: ISOSEQANNOTATE:CLUSTER2 (alz.ccs); status: COMPLETED; exit: 0; error: -; workDir: /home/jeswin/Projects/nfcore/isoseqannotate/work/be/880d05230a58cb697540bfe8196dcc]
+Jul-08 18:02:14.569 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-08 18:02:14.571 [Task submitter] INFO  nextflow.Session - [81/23ca79] Submitted process > ISOSEQANNOTATE:TAMA_CLEANUP (alz.ccs)
+Jul-08 18:02:21.657 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 4; name: ISOSEQANNOTATE:TAMA_CLEANUP (alz.ccs); status: COMPLETED; exit: 0; error: -; workDir: /home/jeswin/Projects/nfcore/isoseqannotate/work/81/23ca79d4154dcff03cbfed211e8ef3]
+Jul-08 18:02:21.696 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-08 18:02:21.697 [Task submitter] INFO  nextflow.Session - [87/f758bd] Submitted process > ISOSEQANNOTATE:PBMM2 (alz.ccs)
+Jul-08 18:02:46.664 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 5; name: ISOSEQANNOTATE:PBMM2 (alz.ccs); status: COMPLETED; exit: 0; error: -; workDir: /home/jeswin/Projects/nfcore/isoseqannotate/work/87/f758bd37a2413d386d6370aa64be79]
+Jul-08 18:02:46.877 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-08 18:02:46.879 [Task submitter] INFO  nextflow.Session - [27/5f5439] Submitted process > ISOSEQANNOTATE:COLLAPSE (alz.ccs)
+Jul-08 18:02:49.205 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 6; name: ISOSEQANNOTATE:COLLAPSE (alz.ccs); status: COMPLETED; exit: 0; error: -; workDir: /home/jeswin/Projects/nfcore/isoseqannotate/work/27/5f54394618cf122e7f546f5dc72474]
+Jul-08 18:02:49.216 [main] DEBUG nextflow.Session - Session await > all processes finished
+Jul-08 18:02:49.310 [Task monitor] DEBUG n.processor.TaskPollingMonitor - <<< barrier arrives (monitor: local) - terminating tasks monitor poll loop
+Jul-08 18:02:49.310 [main] DEBUG nextflow.Session - Session await > all barriers passed
+Jul-08 18:02:49.368 [main] DEBUG nextflow.util.ThreadPoolManager - Thread pool 'TaskFinalizer' shutdown completed (hard=false)
+Jul-08 18:02:49.371 [main] DEBUG nextflow.util.ThreadPoolManager - Thread pool 'PublishDir' shutdown completed (hard=false)
+Jul-08 18:02:49.450 [main] DEBUG n.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=6; failedCount=0; ignoredCount=0; cachedCount=0; pendingCount=0; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=0; succeedDuration=8m 11s; failedDuration=0ms; cachedDuration=0ms;loadCpus=0; loadMemory=0; peakRunning=2; peakCpus=8; peakMemory=0; ]
+Jul-08 18:02:49.587 [main] DEBUG nextflow.trace.ReportObserver - Workflow completed -- rendering execution report
+Jul-08 18:02:50.635 [main] DEBUG nextflow.trace.TimelineObserver - Workflow completed -- rendering execution timeline
+Jul-08 18:02:50.736 [main] DEBUG nextflow.trace.TraceFileObserver - Workflow completed -- saving trace file
+Jul-08 18:02:50.762 [main] DEBUG nextflow.cache.CacheDB - Closing CacheDB done
+Jul-08 18:02:50.804 [main] INFO  org.pf4j.AbstractPluginManager - Stop plugin 'nf-schema@2.3.0'
+Jul-08 18:02:50.805 [main] DEBUG nextflow.plugin.BasePlugin - Plugin stopped nf-schema
+Jul-08 18:02:50.809 [main] DEBUG nextflow.util.ThreadPoolManager - Thread pool 'FileTransfer' shutdown completed (hard=false)
+Jul-08 18:02:50.811 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye
